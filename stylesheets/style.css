@@ -1,0 +1,141 @@
+/* line 2, ../sass/style.scss */
+html,
+body {
+  height: 100%;
+}
+
+/* line 7, ../sass/style.scss */
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-color: #1abc9c;
+}
+
+/* line 12, ../sass/style.scss */
+h1,
+h2,
+h3 {
+  font-family: 'Lobster Two';
+}
+
+/* line 18, ../sass/style.scss */
+h1 {
+  font-size: 4em;
+}
+
+/* line 22, ../sass/style.scss */
+.container {
+  z-index: 10;
+  position: relative;
+  margin-top: 100px;
+}
+
+/* line 28, ../sass/style.scss */
+.tilted {
+  background: url("../img/top-bgr.jpg") 0 0 no-repeat;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 642px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 39, ../sass/style.scss */
+.tilted:before {
+  top: 0;
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-top: 194px solid white;
+  border-right: 3000px solid transparent;
+}
+/* line 57, ../sass/style.scss */
+.tilted:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-bottom: 150px solid white;
+  border-left: 3000px solid transparent;
+}
+
+/* line 75, ../sass/style.scss */
+#header {
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+}
+/* line 86, ../sass/style.scss */
+#header h1 {
+  text-align: center;
+  color: #fff;
+  margin-top: 200px;
+}
+
+/* line 93, ../sass/style.scss */
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -30px;
+  margin-left: -30px;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  -webkit-animation: rotateplane 1.2s infinite ease-in-out;
+  animation: rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes rotateplane {
+  0% {
+    -webkit-transform: perspective(120px);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg);
+  }
+}
+@keyframes rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+/* line 125, ../sass/style.scss */
+#map {
+  height: 100%;
+  z-index: 1;
+  position: relative;
+}
